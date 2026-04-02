@@ -1,0 +1,41 @@
+/* ===== DARK MODE OVERRIDES ===== */
+body.dark-mode {
+  --bg:       #111111;
+  --bg-white: #1a1a1a;
+  --bg-card:  #1e1e1e;
+  --text:     #eeeeee;
+  --text-muted: #aaaaaa;
+  --text-light: #666666;
+  --border:   #2a2a2a;
+  --primary-lt: #1e2a36;
+}
+body.dark-mode .sidebar        { background: #1a1a1a; border-color: #2a2a2a; }
+body.dark-mode .hero           { background: #111; }
+body.dark-mode .hero-bg-panel  { background: #1e1e1e; }
+body.dark-mode .about-section,
+body.dark-mode .experience-section,
+body.dark-mode .testimonials-section,
+body.dark-mode .blog-section   { background: #1a1a1a; }
+body.dark-mode .skills-section,
+body.dark-mode .portfolio-section,
+body.dark-mode .contact-section { background: #111; }
+body.dark-mode .stat-card,
+body.dark-mode .blog-card,
+body.dark-mode .testimonial-card { background: #1e1e1e; border-color: #2a2a2a; }
+body.dark-mode .contact-form   { background: #1e1e1e; border-color: #2a2a2a; }
+body.dark-mode .project-card   { background: #1a1a1a; border-color: #2a2a2a; }
+body.dark-mode .project-img,
+body.dark-mode .modal-img,
+body.dark-mode .blog-img,
+body.dark-mode .avatar-box     { background: #2a2a2a; }
+body.dark-mode .modal-box      { background: #1a1a1a; }
+body.dark-mode .filter-btn,
+body.dark-mode .skill-filter-btn { background: #1e1e1e; border-color: #2a2a2a; }
+body.dark-mode .page-btn       { background: #1a1a1a; border-color: #2a2a2a; color: #888; }
+body.dark-mode .form-group input,
+body.dark-mode .form-group textarea { color: #eee; border-color: #2a2a2a; }
+body.dark-mode .tl-dot         { background: #1a1a1a; }
+body.dark-mode .skill-track    { background: #2a2a2a; }
+body.dark-mode .avatar-placeholder { color: #555; }
+body.dark-mode .footer         { background: #0d0d0d; }
+body.dark-mode .footer-bottom  { border-color: #1a1a1a; }

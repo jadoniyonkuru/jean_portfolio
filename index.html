@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Jean de Dieu — Web Designer & Front-End Developer based in Kigali, Rwanda."/>
+  <meta name="keywords" content="Jean de Dieu, web designer, frontend developer, Rwanda, portfolio"/>
+  <meta name="author" content="Jean de Dieu"/>
+  <title>Jean de Dieu | Web Designer & Front-End Developer</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/dark.css" id="theme-style" disabled/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+</head>
+<body class="light-mode">
+
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-social">
+      <a href="https://linkedin.com" target="_blank" class="social-icon" title="LinkedIn">in</a>
+      <a href="https://github.com" target="_blank" class="social-icon" title="GitHub">gh</a>
+      <a href="https://twitter.com" target="_blank" class="social-icon" title="Twitter">tw</a>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="#home"        class="nav-dot active" data-label="Home"></a>
+      <a href="#about"       class="nav-dot"         data-label="About"></a>
+      <a href="#skills"      class="nav-dot"         data-label="Skills"></a>
+      <a href="#experience"  class="nav-dot"         data-label="Exp."></a>
+      <a href="#portfolio"   class="nav-dot"         data-label="Work"></a>
+      <a href="#testimonials"class="nav-dot"         data-label="Reviews"></a>
+      <a href="#contact"     class="nav-dot"         data-label="Contact"></a>
+      <a href="#blog"        class="nav-dot"         data-label="Blog"></a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark/light mode">
+      <span class="toggle-track">
+        <span class="toggle-thumb"></span>
+      </span>
+      <span class="toggle-label">MODE</span>
+    </button>
+  </aside>
+
+  <!-- ===== MAIN ===== -->
+  <main class="main-content">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="hero-bg-panel"></div>
+      <div class="hero-inner">
+        <div class="hero-text" data-aos="fade-right">
+          <p class="greeting">HOLA, WORLD!</p>
+          <h1 class="hero-name">I'm <span>Jean de Dieu</span></h1>
+          <p class="hero-title">WEB DESIGNER &amp; FRONT-END DEVELOPER</p>
+          <p class="hero-bio">Passionate about building clean, user-friendly digital experiences that make a real difference.</p>
+          <div class="hero-cta">
+            <a href="#portfolio" class="btn btn-primary">VIEW MY WORK</a>
+            <a href="assets/my cv.pdf" class="btn btn-outline" download>DOWNLOAD CV</a>
+          </div>
+          <div class="hero-scroll">
+            <span class="scroll-line"></span>
+            <span class="scroll-text">scroll down</span>
+          </div>
+        </div>
+        <div class="hero-avatar" data-aos="fade-left">
+          <div class="avatar-box">
+            <img src="assets/img/profile.jpeg" alt="Jean de Dieu" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"/>
+            <div class="avatar-placeholder">JD</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">WHO I AM</span>
+          <h2 class="section-title">ABOUT ME</h2>
+        </div>
+        <div class="about-bio" data-aos="fade-up">
+          <p>Hi! I'm Jean de Dieu, a passionate Web Designer and Front-End Developer based in Kigali, Rwanda. I create beautiful, responsive, and user-friendly web experiences. I love turning ideas into reality through clean code and thoughtful design.</p>
+        </div>
+        <div class="about-grid" data-aos="fade-up">
+          <div class="info-col">
+            <div class="info-item"><span class="info-label">First Name</span><span class="info-value">Jean de Dieu</span></div>
+            <div class="info-item"><span class="info-label">Nationality</span><span class="info-value">Rwandan</span></div>
+            <div class="info-item"><span class="info-label">Age</span><span class="info-value">23 Years</span></div>
+            <div class="info-item"><span class="info-label">Freelance</span><span class="info-value available">Available</span></div>
+          </div>
+          <div class="info-col">
+            <div class="info-item"><span class="info-label">Address</span><span class="info-value">Kigali, Rwanda</span></div>
+            <div class="info-item"><span class="info-label">Phone</span><span class="info-value">+250 XXX XXX XXX</span></div>
+            <div class="info-item"><span class="info-label">Email</span><span class="info-value">jean@example.com</span></div>
+            <div class="info-item"><span class="info-label">Languages</span><span class="info-value">Kinyarwanda, French, English</span></div>
+          </div>
+        </div>
+        <a href="assets/my cv.pdf" class="btn btn-outline" download data-aos="fade-up">DOWNLOAD CV</a>
+        <div class="stats-grid" data-aos="fade-up">
+          <div class="stat-card"><span class="stat-num" data-target="5">0</span><span class="stat-label">YEARS EXP.</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="27">0</span><span class="stat-label">PROJECTS</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="40">0</span><span class="stat-label">HAPPY CLIENTS</span></div>
+          <div class="stat-card"><span class="stat-num" data-target="7">0</span><span class="stat-label">AWARDS WON</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">WHAT I DO</span>
+          <h2 class="section-title">MY SKILLS</h2>
+        </div>
+        <div class="skill-filters" data-aos="fade-up">
+          <button class="skill-filter-btn active" data-filter="all">All</button>
+          <button class="skill-filter-btn" data-filter="frontend">Frontend</button>
+          <button class="skill-filter-btn" data-filter="backend">Backend</button>
+          <button class="skill-filter-btn" data-filter="design">Design</button>
+        </div>
+        <div class="skills-grid" data-aos="fade-up">
+          <div class="skill-bar-item" data-category="frontend">
+            <div class="skill-meta"><span>HTML / CSS</span><span>90%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="backend">
+            <div class="skill-meta"><span>Node.js</span><span>70%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="frontend">
+            <div class="skill-meta"><span>JavaScript</span><span>85%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="backend">
+            <div class="skill-meta"><span>Python</span><span>65%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="65"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="frontend">
+            <div class="skill-meta"><span>React.js</span><span>75%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="backend">
+            <div class="skill-meta"><span>MySQL / Firebase</span><span>72%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="72"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="design">
+            <div class="skill-meta"><span>Figma / UI Design</span><span>80%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item" data-category="backend">
+            <div class="skill-meta"><span>Git / GitHub</span><span>88%</span></div>
+            <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
+          </div>
+        </div>
+        <div class="skill-tags" data-aos="fade-up">
+          <span class="tag active">React</span>
+          <span class="tag">Node.js</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Figma</span>
+          <span class="tag">MySQL</span>
+          <span class="tag">Python</span>
+          <span class="tag">Git</span>
+          <span class="tag">HTML/CSS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== EXPERIENCE & EDUCATION ===== -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">MY STORY</span>
+          <h2 class="section-title">EXPERIENCE &amp; EDUCATION</h2>
+        </div>
+        <div class="timeline-grid">
+          <div class="timeline-col" data-aos="fade-right">
+            <h3 class="timeline-col-title">EXPERIENCE</h3>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-date">2023 – Present</span>
+                  <h4 class="tl-role">Frontend Developer — Freelance</h4>
+                  <p class="tl-desc">Building responsive web apps for local businesses.</p>
+                  <p class="tl-achievement">🏆 Delivered 10+ projects on time &amp; within budget.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-date">2022 – 2023</span>
+                  <h4 class="tl-role">Web Design Intern — Tech Company</h4>
+                  <p class="tl-desc">Designed UI mockups and prototypes in Figma.</p>
+                  <p class="tl-achievement">🏆 Redesigned company landing page, +40% engagement.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-date">2021 – 2022</span>
+                  <h4 class="tl-role">Junior Developer — Campus Project</h4>
+                  <p class="tl-desc">Built student management system with team.</p>
+                  <p class="tl-achievement">🏆 Won Best Project Award at university showcase.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-col" data-aos="fade-left">
+            <h3 class="timeline-col-title">EDUCATION</h3>
+            <div class="timeline">
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-date">2021 – 2025</span>
+                  <h4 class="tl-role">BSc Computer Science &amp; Engineering</h4>
+                  <p class="tl-desc">University of Rwanda</p>
+                  <p class="tl-achievement">🏆 Dean's List 2022 &amp; 2023.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-date">2018 – 2021</span>
+                  <h4 class="tl-role">A-Level — Groupe Scolaire</h4>
+                  <p class="tl-desc">BON BOYS ROIC RBC, Kigali</p>
+                  <p class="tl-achievement">🏆 Top of class in Mathematics.</p>
+                </div>
+              </div>
+              <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-content">
+                  <span class="tl-date">2023</span>
+                  <h4 class="tl-role">Google UX Design Certificate</h4>
+                  <p class="tl-desc">Coursera / Google</p>
+                  <p class="tl-achievement">🏆 Completed with distinction.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section class="section portfolio-section" id="portfolio">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">MY WORKS</span>
+          <h2 class="section-title">PORTFOLIO</h2>
+        </div>
+        <div class="portfolio-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="frontend">Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="design">UI Design</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+        </div>
+        <div class="portfolio-grid" id="portfolioGrid" data-aos="fade-up">
+          <div class="project-card" data-category="fullstack" data-aos="zoom-in">
+            <div class="project-img"><div class="project-img-placeholder">AG</div></div>
+            <div class="project-overlay"><span class="overlay-icon">+</span></div>
+            <div class="project-info">
+              <h3 class="project-title">AgroConnect Platform</h3>
+              <p class="project-desc">Digital marketplace for Rwandan farmers</p>
+              <div class="project-tags"><span class="tag">React.js</span><span class="tag">Firebase</span></div>
+              <div class="project-links">
+                <a href="#" class="btn-sm btn-outline" target="_blank">GitHub</a>
+                <a href="#" class="btn-sm btn-primary" target="_blank">Live Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="frontend" data-aos="zoom-in">
+            <div class="project-img"><div class="project-img-placeholder">SS</div></div>
+            <div class="project-overlay"><span class="overlay-icon">+</span></div>
+            <div class="project-info">
+              <h3 class="project-title">SmartStock System</h3>
+              <p class="project-desc">Inventory management web application</p>
+              <div class="project-tags"><span class="tag">HTML/JS</span><span class="tag">MySQL</span></div>
+              <div class="project-links">
+                <a href="#" class="btn-sm btn-outline" target="_blank">GitHub</a>
+                <a href="#" class="btn-sm btn-primary" target="_blank">Live Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="frontend" data-aos="zoom-in">
+            <div class="project-img"><div class="project-img-placeholder">SM</div></div>
+            <div class="project-overlay"><span class="overlay-icon">+</span></div>
+            <div class="project-info">
+              <h3 class="project-title">Staff Management App</h3>
+              <p class="project-desc">User management system with roles &amp; permissions</p>
+              <div class="project-tags"><span class="tag">Vanilla JS</span><span class="tag">CSS</span></div>
+              <div class="project-links">
+                <a href="#" class="btn-sm btn-outline" target="_blank">GitHub</a>
+                <a href="#" class="btn-sm btn-primary" target="_blank">Live Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="frontend" data-aos="zoom-in">
+            <div class="project-img"><div class="project-img-placeholder">PF</div></div>
+            <div class="project-overlay"><span class="overlay-icon">+</span></div>
+            <div class="project-info">
+              <h3 class="project-title">Portfolio Website</h3>
+              <p class="project-desc">Personal portfolio — this very site!</p>
+              <div class="project-tags"><span class="tag">HTML/CSS</span><span class="tag">JS</span></div>
+              <div class="project-links">
+                <a href="#" class="btn-sm btn-outline" target="_blank">GitHub</a>
+                <a href="#" class="btn-sm btn-primary" target="_blank">Live Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="fullstack" data-aos="zoom-in">
+            <div class="project-img"><div class="project-img-placeholder">IoT</div></div>
+            <div class="project-overlay"><span class="overlay-icon">+</span></div>
+            <div class="project-info">
+              <h3 class="project-title">IoT Dashboard</h3>
+              <p class="project-desc">Real-time sensor monitoring UI</p>
+              <div class="project-tags"><span class="tag">React</span><span class="tag">MQTT</span></div>
+              <div class="project-links">
+                <a href="#" class="btn-sm btn-outline" target="_blank">GitHub</a>
+                <a href="#" class="btn-sm btn-primary" target="_blank">Live Site</a>
+              </div>
+            </div>
+          </div>
+          <div class="project-card" data-category="design" data-aos="zoom-in">
+            <div class="project-img"><div class="project-img-placeholder">EC</div></div>
+            <div class="project-overlay"><span class="overlay-icon">+</span></div>
+            <div class="project-info">
+              <h3 class="project-title">E-Commerce UI</h3>
+              <p class="project-desc">Modern shopping experience design</p>
+              <div class="project-tags"><span class="tag">Figma</span><span class="tag">UI/UX</span></div>
+              <div class="project-links">
+                <a href="#" class="btn-sm btn-outline" target="_blank">Behance</a>
+                <a href="#" class="btn-sm btn-primary" target="_blank">Preview</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROJECT MODAL -->
+      <div class="modal-overlay" id="projectModal">
+        <div class="modal-box">
+          <button class="modal-close" id="modalClose">&times;</button>
+          <div class="modal-inner">
+            <div class="modal-img"><div class="modal-img-placeholder" id="modalImgText"></div></div>
+            <div class="modal-details">
+              <h3 id="modalTitle"></h3>
+              <p id="modalDesc"></p>
+              <div class="modal-tags" id="modalTags"></div>
+              <div class="modal-links" id="modalLinks"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">WHAT PEOPLE SAY</span>
+          <h2 class="section-title">TESTIMONIALS</h2>
+        </div>
+        <div class="testimonials-grid" data-aos="fade-up">
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Jean delivered an outstanding website for our business. His attention to detail and creativity exceeded our expectations. Highly recommended!</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">AU</div>
+              <div class="author-info">
+                <span class="author-name">Alice Uwimana</span>
+                <span class="author-role">CEO, TechStart Rwanda</span>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Working with Jean was a pleasure. He understood our requirements quickly and produced clean, maintainable code. Great communicator too.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MH</div>
+              <div class="author-info">
+                <span class="author-name">Dr. Marc Habimana</span>
+                <span class="author-role">Lecturer, University of Rwanda</span>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="quote-mark">"</div>
+            <p class="testimonial-text">Jean's portfolio design work for our NGO was exceptional. Modern, fast, and exactly what we envisioned. Will work with him again for sure.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SN</div>
+              <div class="author-info">
+                <span class="author-name">Sarah Nkurunziza</span>
+                <span class="author-role">Director, Hope NGO</span>
+              </div>
+              <div class="stars">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">CONTACT</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos="fade-right">
+            <p class="contact-intro">Feel free to reach out. I am always open to new projects, creative ideas, and opportunities to collaborate.</p>
+            <div class="contact-item">
+              <div class="contact-icon">@</div>
+              <div><span class="contact-label">EMAIL</span><span class="contact-value">jean@example.com</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">☎</div>
+              <div><span class="contact-label">PHONE</span><span class="contact-value">+250 XXX XXX XXX</span></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">⌖</div>
+              <div><span class="contact-label">LOCATION</span><span class="contact-value">Kigali, Rwanda</span></div>
+            </div>
+            <div class="contact-socials">
+              <span class="contact-label">FIND ME ON</span>
+              <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" class="btn btn-primary">LinkedIn</a>
+                <a href="https://github.com"   target="_blank" class="btn btn-outline">GitHub</a>
+                <a href="https://twitter.com"  target="_blank" class="btn btn-outline">Twitter/X</a>
+              </div>
+            </div>
+          </div>
+          <form class="contact-form" id="contactForm" data-aos="fade-left" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required/>
+                <span class="form-error" id="firstNameError"></span>
+              </div>
+              <div class="form-group">
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required/>
+                <span class="form-error" id="lastNameError"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" name="email" placeholder="Email Address *" required/>
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <input type="text" id="subject" name="subject" placeholder="Subject" required/>
+              <span class="form-error" id="subjectError"></span>
+            </div>
+            <div class="form-group">
+              <textarea id="message" name="message" placeholder="Your Message *" rows="5" required></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <p class="form-note">* Required fields</p>
+            <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+            <div class="form-success" id="formSuccess">✓ Message sent successfully! I'll get back to you soon.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLOG ===== -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <span class="section-tag">LATEST POSTS</span>
+          <h2 class="section-title">MY BLOG</h2>
+        </div>
+        <div class="blog-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="tutorial">Tutorial</button>
+          <button class="filter-btn" data-filter="design">Design</button>
+          <button class="filter-btn" data-filter="devtips">Dev Tips</button>
+          <button class="filter-btn" data-filter="career">Career</button>
+        </div>
+        <div class="blog-grid" id="blogGrid" data-aos="fade-up">
+          <article class="blog-card" data-category="tutorial">
+            <div class="blog-img"><div class="blog-img-placeholder">📧</div></div>
+            <div class="blog-body">
+              <span class="blog-cat tutorial">Tutorial</span>
+              <span class="blog-date">Jan 2024</span>
+              <h3 class="blog-title">How to Own Your Audience by Creating an Email List</h3>
+              <p class="blog-excerpt">Learn the step-by-step process of building a loyal audience through email marketing strategies that actually work.</p>
+              <a href="#" class="blog-read-more">READ MORE →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-category="devtips">
+            <div class="blog-img"><div class="blog-img-placeholder">🤖</div></div>
+            <div class="blog-body">
+              <span class="blog-cat devtips">Dev Tips</span>
+              <span class="blog-date">Feb 2024</span>
+              <h3 class="blog-title">Top 10 Toolkits for Deep Learning in 2024</h3>
+              <p class="blog-excerpt">A comprehensive overview of the most powerful and beginner-friendly deep learning frameworks available today.</p>
+              <a href="#" class="blog-read-more">READ MORE →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-category="design">
+            <div class="blog-img"><div class="blog-img-placeholder">♿</div></div>
+            <div class="blog-body">
+              <span class="blog-cat design">Design</span>
+              <span class="blog-date">Mar 2024</span>
+              <h3 class="blog-title">Everything You Need to Know About Web Accessibility</h3>
+              <p class="blog-excerpt">A practical guide to making your websites inclusive and accessible to users of all abilities.</p>
+              <a href="#" class="blog-read-more">READ MORE →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-category="career">
+            <div class="blog-img"><div class="blog-img-placeholder">😄</div></div>
+            <div class="blog-body">
+              <span class="blog-cat career">Career</span>
+              <span class="blog-date">Apr 2024</span>
+              <h3 class="blog-title">How to Inject Humor &amp; Personality Into Your Brand</h3>
+              <p class="blog-excerpt">Discover how the right tone of voice can make your brand more memorable and human.</p>
+              <a href="#" class="blog-read-more">READ MORE →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-category="career">
+            <div class="blog-img"><div class="blog-img-placeholder">👩‍💻</div></div>
+            <div class="blog-body">
+              <span class="blog-cat career">Career</span>
+              <span class="blog-date">May 2024</span>
+              <h3 class="blog-title">Women in Web Design: How to Achieve Success</h3>
+              <p class="blog-excerpt">Inspiring stories and actionable tips for women building careers in the tech and design industry.</p>
+              <a href="#" class="blog-read-more">READ MORE →</a>
+            </div>
+          </article>
+          <article class="blog-card" data-category="tutorial">
+            <div class="blog-img"><div class="blog-img-placeholder">🌿</div></div>
+            <div class="blog-body">
+              <span class="blog-cat tutorial">Tutorial</span>
+              <span class="blog-date">Jun 2024</span>
+              <h3 class="blog-title">Evergreen vs Topical Content: A Complete Overview</h3>
+              <p class="blog-excerpt">Understand the key differences and learn when to use each content strategy for maximum impact.</p>
+              <a href="#" class="blog-read-more">READ MORE →</a>
+            </div>
+          </article>
+        </div>
+        <div class="blog-pagination" data-aos="fade-up">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn page-next">→</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <h3>Jean de Dieu</h3>
+        <p>Web Designer &amp; Front-End Developer</p>
+      </div>
+      <nav class="footer-nav">
+        <span class="footer-nav-title">NAVIGATION</span>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <span class="footer-nav-title">FIND ME ON</span>
+        <div class="footer-social-links">
+          <a href="https://linkedin.com" target="_blank" class="footer-social-btn">in</a>
+          <a href="https://github.com"   target="_blank" class="footer-social-btn">gh</a>
+          <a href="https://twitter.com"  target="_blank" class="footer-social-btn">tw</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Jean de Dieu. All Rights Reserved. Designed with passion in Rwanda.</p>
+      <a href="#home" class="back-to-top" id="backToTop">↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
