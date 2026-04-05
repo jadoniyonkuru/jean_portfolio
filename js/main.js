@@ -24,14 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* ── 2. ACTIVE NAV DOT ON SCROLL ── */
   const sections = document.querySelectorAll('section[id]');
-  const navDots  = document.querySelectorAll('.nav-dot');
+  const navLinks  = document.querySelectorAll('.nav-link');
   function updateNav() {
     const scrollY = window.scrollY + window.innerHeight / 3;
     sections.forEach(sec => {
       if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
-        navDots.forEach(d => d.classList.remove('active'));
-        const dot = document.querySelector(`.nav-dot[href="#${sec.id}"]`);
-        if (dot) dot.classList.add('active');
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
+        if (link) link.classList.add('active');
       }
     });
   }
