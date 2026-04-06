@@ -2,7 +2,35 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── 1. DARK / LIGHT MODE ── */
+  /* ── 1. MOBILE MENU TOGGLE ── */
+  const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+  const headerNav = document.querySelector('.header-nav');
+  
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', () => {
+      mobileMenuToggle.classList.toggle('active');
+      headerNav.classList.toggle('active');
+    });
+  }
+  
+  // Close mobile menu when clicking on a nav link
+  const mobileNavHeaders = document.querySelectorAll('.nav-header');
+  mobileNavHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      mobileMenuToggle.classList.remove('active');
+      headerNav.classList.remove('active');
+    });
+  });
+  
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!headerNav.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+      mobileMenuToggle.classList.remove('active');
+      headerNav.classList.remove('active');
+    }
+  });
+
+  /* ── 2. DARK / LIGHT MODE ── */
   const themeToggle = document.getElementById('themeToggle');
   const themeStyle  = document.getElementById('theme-style');
   const saved = localStorage.getItem('theme');
@@ -22,23 +50,121 @@ document.addEventListener('DOMContentLoaded', () => {
     localStorage.setItem('theme', 'light');
   }
 
-  /* ── 2. ACTIVE NAV DOT ON SCROLL ── */
+  /* ── 2. ACTIVE NAV HEADER ON SCROLL ── */
   const sections = document.querySelectorAll('section[id]');
-  const navLinks  = document.querySelectorAll('.nav-link');
+  const navHeaders  = document.querySelectorAll('.nav-header');
   function updateNav() {
     const scrollY = window.scrollY + window.innerHeight / 3;
     sections.forEach(sec => {
       if (scrollY >= sec.offsetTop && scrollY < sec.offsetTop + sec.offsetHeight) {
-        navLinks.forEach(l => l.classList.remove('active'));
-        const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
-        if (link) link.classList.add('active');
+        navHeaders.forEach(h => h.classList.remove('active'));
+        const header = document.querySelector(`.nav-header[href="#${sec.id}"]`);
+        if (header) header.classList.add('active');
       }
     });
   }
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav();
 
-  /* ── 3. AOS-LITE (Animate On Scroll) ── */
+  /* ── 3. BLOG READ MORE FUNCTIONALITY ── */
+  const readMoreBtns = document.querySelectorAll('.blog-read-more');
+  readMoreBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const card = btn.closest('.blog-card');
+      const title = card.querySelector('.blog-title').textContent;
+      
+      // Get the specific content for this blog post
+      const blogContent = getBlogContent(title);
+      
+      // Check if content is already expanded
+      const existingContent = card.querySelector('.blog-full-content');
+      if (existingContent) {
+        // Content is already showing, hide it
+        existingContent.style.display = 'none';
+        btn.textContent = 'READ MORE →';
+      } else {
+        // Create and show the full content
+        const fullContentDiv = document.createElement('div');
+        fullContentDiv.className = 'blog-full-content';
+        fullContentDiv.innerHTML = blogContent;
+        
+        // Add it after the blog body
+        const blogBody = card.querySelector('.blog-body');
+        blogBody.appendChild(fullContentDiv);
+        
+        // Change button text
+        btn.textContent = 'READ LESS ←';
+        
+        // Smooth scroll to the expanded content
+        setTimeout(() => {
+          fullContentDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      }
+    });
+  });
+
+  function getBlogContent(title) {
+    const contents = {
+      "How to Own Your Audience by Creating an Email List": `
+        <div class="blog-full-content-inner">
+          <p>Building an email list gives you direct access to your audience without relying on social media algorithms.</p>
+          
+          <h4>Key Strategy</h4>
+          <p>Choose Mailchimp for beginners or ConvertKit for creators. Create valuable lead magnets like eBooks or templates. Set up automated welcome sequences to build trust immediately.</p>
+        </div>
+      `,
+      
+      "Top 10 Toolkits for Deep Learning in 2024": `
+        <div class="blog-full-content-inner">
+          <p>Deep learning frameworks make AI development accessible with pre-built tools and libraries.</p>
+          
+          <h4>Top Choices</h4>
+          <p>Start with Fast.ai for beginners, use PyTorch for research flexibility, choose TensorFlow for production, and select Hugging Face for NLP projects.</p>
+        </div>
+      `,
+      
+      "Everything You Need to Know About Web Accessibility": `
+        <div class="blog-full-content-inner">
+          <p>Web accessibility ensures everyone can use your digital products regardless of their abilities.</p>
+          
+          <h4>Essential Steps</h4>
+          <p>Use semantic HTML structure, maintain proper color contrast, ensure keyboard navigation works, and provide descriptive alt text for all images.</p>
+        </div>
+      `,
+      
+      "How to Inject Humor & Personality Into Your Brand": `
+        <div class="blog-full-content-inner">
+          <p>Your brand personality makes you memorable and different from competitors.</p>
+          
+          <h4>Be Human</h4>
+          <p>Write conversational copy, share behind-the-scenes content, and use appropriate humor. Know your audience boundaries and stay authentic to your values.</p>
+        </div>
+      `,
+      
+      "Women in Web Design: How to Achieve Success": `
+        <div class="blog-full-content-inner">
+          <p>Women are increasingly succeeding in web design despite remaining underrepresented in tech roles.</p>
+          
+          <h4>Success Path</h4>
+          <p>Build strong technical skills, create diverse portfolio projects, join women-focused communities, and don't hesitate to advocate for yourself and negotiate fairly.</p>
+        </div>
+      `,
+      
+      "Evergreen vs Topical Content: A Complete Overview": `
+        <div class="blog-full-content-inner">
+          <p>Content strategy balances timeless educational content with timely trend-driven posts.</p>
+          
+          <h4>Smart Mix</h4>
+          <p>Focus 70% on evergreen content for long-term SEO value and 30% on topical content for immediate engagement. Track different metrics for each content type.</p>
+        </div>
+      `
+    };
+    
+    return contents[title] || '<div class="blog-full-content-inner"><p>Full content for this blog post is coming soon. Check back later for more detailed information.</p></div>';
+  }
+
+  /* ── 4. AOS-LITE (Animate On Scroll) ── */
   const aosEls = document.querySelectorAll('[data-aos]');
   const aosObs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('aos-animate'); aosObs.unobserve(e.target); } });
