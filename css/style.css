@@ -661,6 +661,12 @@ body.dark-mode .section-nav-title {
 .blog-img {
   height: 180px; background: #dce4f0;
   display: flex; align-items: center; justify-content: center;
+  overflow: hidden; position: relative;
+}
+.blog-img img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  transition: transform 0.3s ease;
 }
 .blog-img-placeholder { font-size: 40px; }
 .blog-body { padding: 20px; }
