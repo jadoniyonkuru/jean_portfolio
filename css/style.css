@@ -590,6 +590,75 @@ body.dark-mode .section-nav-title {
 .author-name { display: block; font-size: 13px; font-weight: 600; color: var(--text); }
 .author-role { display: block; font-size: 11px; color: var(--text-light); }
 .stars { color: var(--primary); font-size: 13px; margin-left: auto; }
+.ref-contact {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border);
+  font-size: 11px;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ref-contact a {
+  color: var(--primary);
+  text-decoration: none;
+}
+.ref-contact a:hover {
+  text-decoration: underline;
+}
+
+/* ===== CERTIFICATIONS ===== */
+.certifications-section { background: var(--bg); }
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cert-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(44,62,80,0.08);
+}
+.cert-icon {
+  font-size: 26px;
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-lt);
+  color: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cert-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+.cert-issuer {
+  font-size: 12px;
+  color: var(--primary);
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: inline-block;
+}
+.cert-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
 
 /* ===== CONTACT ===== */
 .contact-section { background: var(--bg); padding-bottom: 0; }
@@ -792,7 +861,7 @@ body.dark-mode .section-nav-title {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .portfolio-grid, .blog-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+  .portfolio-grid, .blog-grid, .testimonials-grid, .certifications-grid { grid-template-columns: repeat(2, 1fr); }
   .timeline-grid { grid-template-columns: 1fr; }
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
   .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -809,7 +878,7 @@ body.dark-mode .section-nav-title {
   .about-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .contact-grid { grid-template-columns: 1fr; }
-  .portfolio-grid, .blog-grid, .testimonials-grid { grid-template-columns: 1fr; }
+  .portfolio-grid, .blog-grid, .testimonials-grid, .certifications-grid { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   .container { padding: 0 24px; }
   .modal-inner { flex-direction: column; }

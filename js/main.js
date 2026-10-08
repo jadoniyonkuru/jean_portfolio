@@ -239,18 +239,49 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal      = document.getElementById('projectModal');
   const modalClose = document.getElementById('modalClose');
   const modalData  = {
-    'AgroConnect Platform':  { desc: 'Digital marketplace connecting Rwandan farmers to buyers. Built with React.js, Firebase, and Africa\'s Talking API for SMS notifications.', tags: ['React.js','Firebase','Africa\'s Talking'], gh: '#', live: '#' },
-    'SmartStock System':     { desc: 'Inventory management web application for small businesses. Features product CRUD, stock adjustments, sales recording, and low-stock alerts.', tags: ['HTML','CSS','JavaScript','MySQL'], gh: '#', live: '#' },
-    'Staff Management App':  { desc: 'User management system with role-based access control. Supports admin, manager, and staff roles with full CRUD operations.', tags: ['Vanilla JS','HTML','CSS'], gh: '#', live: '#' },
-    'Portfolio Website':     { desc: 'This very portfolio — designed in Figma and built with vanilla HTML, CSS, and JavaScript. Fully responsive with dark/light mode.', tags: ['HTML','CSS','JavaScript'], gh: '#', live: '#' },
-    'IoT Dashboard':         { desc: 'Real-time sensor monitoring interface for IoT devices. Uses MQTT protocol for live data streaming and React for dynamic UI updates.', tags: ['React','MQTT','Firebase'], gh: '#', live: '#' },
-    'E-Commerce UI':         { desc: 'Modern shopping experience UI design — wireframes through high-fidelity prototype in Figma. Includes product grid, cart, and checkout flow.', tags: ['Figma','UI/UX','Prototyping'], gh: '#', live: '#' },
+    'Bwenge E-Learning Platform': {
+      desc: 'Full-stack e-learning platform built at Binary Hub featuring role-based access control (students, instructors, administrators), courses, enrollments, reports, and persistent PostgreSQL database. Containerized with Docker and deployed via Render and Vercel.',
+      tags: ['TypeScript', 'React', 'Node.js', 'PostgreSQL', 'Docker', 'Render'],
+      gh: 'https://github.com/jadoniyonkuru',
+      live: '#'
+    },
+    'RWF Miner Platform': {
+      desc: 'Web application developed with Gingo Tech supporting payment workflows, automated Stripe integrations, user authentication, Neon PostgreSQL database, and Docker containerized deployments.',
+      tags: ['Full-Stack', 'Stripe', 'Neon', 'Docker', 'Vercel'],
+      gh: 'https://github.com/jadoniyonkuru',
+      live: '#'
+    },
+    'Enterprise Network Simulation': {
+      desc: 'Simulated enterprise network topologies designed in Cisco Packet Tracer. Features multi-VLAN switching, dynamic routing protocols, TCP/IP subnetting, access control lists (ACLs), and perimeter network security.',
+      tags: ['Cisco Packet Tracer', 'Routing & Switching', 'TCP/IP', 'Network Security'],
+      gh: 'https://github.com/jadoniyonkuru',
+      live: '#'
+    },
+    'SmartStock System': {
+      desc: 'Inventory management web application for businesses. Features product CRUD operations, stock adjustments, sales recording, and automated low-stock alerts.',
+      tags: ['HTML', 'JavaScript', 'CSS', 'MySQL', 'Vercel'],
+      gh: 'https://github.com/jadoniyonkuru/stock-management-system.git',
+      live: 'https://stock-management-system-eta-gilt.vercel.app/'
+    },
+    'IoT & Hardware Monitoring System': {
+      desc: 'Real-time sensor monitoring and device tracking dashboard integrating IoT hardware, sensors, powered components, and containerized backends with VMware virtualization and Docker Compose.',
+      tags: ['IoT', 'Docker Compose', 'VMware', 'Hardware', 'APIs'],
+      gh: 'https://github.com/jadoniyonkuru',
+      live: '#'
+    },
+    'AgroConnect Platform': {
+      desc: 'Digital marketplace connecting Rwandan farmers to buyers. Built with responsive web interfaces, realtime data management, and notification APIs.',
+      tags: ['React.js', 'Firebase', 'Full-Stack', 'APIs'],
+      gh: 'https://github.com/jadoniyonkuru',
+      live: '#'
+    }
   };
 
   document.querySelectorAll('.project-card').forEach(card => {
     card.addEventListener('click', () => {
-      const title = card.querySelector('.project-title').textContent;
-      const imgText = card.querySelector('.project-img-placeholder').textContent;
+      const title = card.querySelector('.project-title')?.textContent || '';
+      const placeholderEl = card.querySelector('.project-img-placeholder');
+      const imgText = placeholderEl ? placeholderEl.textContent : title.split(' ').map(w => w[0]).join('').substring(0, 3);
       const data = modalData[title] || {};
       document.getElementById('modalTitle').textContent = title;
       document.getElementById('modalDesc').textContent  = data.desc || '';
